@@ -1,0 +1,62 @@
+menu "PRINTMASS Config"
+
+  config PRNM_DEVMODE
+    bool "Dev Mode"
+    default n
+  
+  menu "PRINTER"
+    config PRNM_PRINTER_BDA
+      string "Remote printer BLE device address (AA:BB:CC:DD:EE:FF)"
+      default "06:01:06:FB:2A:31"
+
+    config PRNM_BT_MTU
+      int "BT MTU"
+      default 200
+
+    config PRNM_PRINTER_PING_MS
+      int "Ping printer every N ms"
+      default 600000
+
+  endmenu
+
+  menu "TOUCH"
+
+    config PRNM_TOUCH_GPIO
+      int "Touch sensor GPIO input"
+      default 12
+
+    config PRNM_TOUCH_DEBOUNCE
+      int "Touch sensor debounce"
+      default 100
+
+  endmenu
+
+  menu "LEDs"
+
+    config PRNM_LED_1_GPIO
+      int "Led tree gpio"
+      default 7
+
+    config PRNM_LED_2_GPIO
+      int "Led tree gpio"
+      default 8
+
+    config PRNM_LED_3_GPIO
+      int "Led tree gpio"
+      default 9
+
+    config PRNM_LED_4_GPIO
+      int "Led tree gpio"
+      default 4
+
+    config PRNM_LED_5_GPIO
+      int "Led tree gpio"
+      default 5
+
+    config PRNM_LED_6_GPIO
+      int "Led tree gpio"
+      default 6
+
+  endmenu
+
+endmenu
